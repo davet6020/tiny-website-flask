@@ -31,7 +31,7 @@ def index():
 
 @app.route('/thankyou')
 def thankyou():
-	flash('Thanks for the info!')
+	flash('and thanks for the info!')
 	return render_template('thankyou.html')
 
 if __name__ == '__main__':

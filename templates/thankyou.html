@@ -1,12 +1,18 @@
-<h1>Thanks for stopping by</h1>
+<div style="display:flex;flex-direction:column;gap:10px;padding:20px;border:1px solid #ddd;border-radius:10px">
+    <div style="display:flex;flex-direction:row;justify-content:space-between;border-bottom:1px solid #ddd;padding-bottom:10px">
+        <div style="font-weight:bold">Thanks for stopping by</div>
+    </div>
 
-{% for message in get_flashed_messages() %}
-	<div>
-		{{ message }}
+	<div style="display:flex;flex-direction:column;gap:5px;font-weight:bold">
+		{% for message in get_flashed_messages() %}
+			<div>
+				{{ message }}
+			</div>
+		{% endfor %}
+
+		<ul>
+			<li>Name: {{ session['name'] }}</li>
+			<li>Feedback: {{ session['feedback'] }}</li>
+		</ul>
 	</div>
-{% endfor %}
-
-<ul>
-	<li>Name: {{ session['name'] }}</li>
-	<li>Feedback: {{ session['feedback'] }}</li>
-</ul>
+</div>
