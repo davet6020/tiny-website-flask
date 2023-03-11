@@ -1,0 +1,16 @@
+<div style="display:flex;flex-direction:column;gap:10px;padding:20px;border:1px solid #ddd;border-radius:10px">
+    <div style="display:flex;flex-direction:row;justify-content:space-between;border-bottom:1px solid #ddd;padding-bottom:10px">
+        <div style="font-weight:bold">Welcome to the home page</div>
+    </div>
+
+<div style="display:flex;flex-direction:column;gap:5px;font-weight:bold">
+	<form method="POST">
+		{{ form.hidden_tag() }}
+		{{ form.name.label }}{{ form.name() }}<br>
+		Enter Feedback
+		{{ form.feedback() }}
+		<br>
+        <button style="background-color:#2196f3;color:white;padding:10px 20px;border:1px solid #2196f3;border-radius:5px;cursor:pointer">{{ form.submit() }}</button>
+	</form>
+	</div>
+</div>
